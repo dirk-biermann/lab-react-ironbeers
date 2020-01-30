@@ -7,14 +7,11 @@ export default class Home extends Component {
         this.state = {
         }
     }
-    click = () => {
-        this.props.showNavbar(true);
-    }
 
     render() {
         return (
-            <div className="card_list">
-                <Link to='/beers' onClick={this.click}>
+            <div className="obj_list">
+                <Link to='/beers'>
                 <div className="card">
                     <img src="/images/beers.png" alt="" /> 
                     <div className="box">

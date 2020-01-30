@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import Beer from './Beer.js';
 
-export default class RandomBeer extends Component {
+export default class Beerdetail extends Component {
     constructor(){
         super();
         this.state = {
@@ -12,7 +12,7 @@ export default class RandomBeer extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://ih-beers-api2.herokuapp.com/beers/random`)
+        axios.get(`https://ih-beers-api2.herokuapp.com/beers/${this.props.match.params.id}`)
             .then(responseBeer => {
                 console.log( "BEER", responseBeer )
                 this.setState({ beer: responseBeer.data });
